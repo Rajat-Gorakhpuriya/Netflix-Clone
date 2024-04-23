@@ -1,12 +1,8 @@
-import './App.css';
+import Body from './components/Body';
 
 function App() {
   return (
-    <div className="App">
-      <header className="font-bold text-green-600">
-        Rajat Gorakhpuriya
-      </header>
-    </div>
+    <Body></Body>
   );
 }
 
