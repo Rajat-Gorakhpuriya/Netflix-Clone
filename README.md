@@ -1,5 +1,8 @@
 - Create React App - netflix-clone
-- Add Tailwind CSS
+- Configuration for Tailwind CSS
+- Header Added
+- Login Form Genertion
+- Sign up Form
 
 # Features 
 - Login/Sign Up
