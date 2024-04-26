@@ -1,8 +1,19 @@
 - Create React App - netflix-clone
 - Configuration for Tailwind CSS
 - Header Added
+- Routing of App
 - Login Form Genertion
 - Sign up Form
+- Form Validation
+- useRef Hook
+- Firebase setup
+- Deploying app to Firebase
+- Create SignUp User Account
+- Implimenting SignIn user 
+- Created Redux Store with userSlice
+- Impliment Sign Out feature
+- Update Profile
+- 
 
 # Features 
 - Login/Sign Up
