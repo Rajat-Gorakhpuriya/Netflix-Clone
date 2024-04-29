@@ -13,7 +13,10 @@
 - Created Redux Store with userSlice
 - Impliment Sign Out feature
 - Update Profile
-- 
+- Bugfix for signup username and profile pic
+- Bugfix for redirect browse page without login
+- Unsubscribed to the onAuthStateChanged callback
+- Added Hardcode values into the constant files
 
 # Features 
 - Login/Sign Up

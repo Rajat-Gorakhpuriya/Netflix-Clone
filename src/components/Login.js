@@ -4,13 +4,12 @@ import { checkValidData } from '../utils/validate';
 import {createUserWithEmailAndPassword} from "firebase/auth";
 import { auth } from '../utils/firebase';
 import { signInWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { BACKGROUND_IMG, USER_AVATAR } from '../utils/constants';
 
 
 const Login = () => {
-  const navigate = useNavigate();
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMsg, setErrorMsg] = useState(null);
   const dispatch = useDispatch();
@@ -37,7 +36,7 @@ const Login = () => {
             const user = userCredential.user;
             updateProfile(user, {
               displayName: name?.current?.value, 
-              photoURL: "https://avatars.githubusercontent.com/u/53934056?v=4"
+              photoURL: USER_AVATAR
             }).then(() => {
               // Profile updated!
               // we see that after login in redux state we see null for dsplayName and photoURL
@@ -45,7 +44,6 @@ const Login = () => {
               // this time we take the prop from the current user (updated value from the user).
               const { uid, email, displayName, photoURL } = auth.currentUser;
               dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }));
-              navigate("/browse");
             }).catch((error) => {
               // An error occurred
               setErrorMsg(error.message);
@@ -62,7 +60,6 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email?.current?.value, password?.current?.value)
           .then((userCredential) => {
             // Signed in 
-            navigate("/browse");            
           })
           .catch((error) => {
             const errorCode = error.code;
@@ -78,7 +75,7 @@ const Login = () => {
        <Header></Header>
       <div className='absolute'>
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/9f46b569-aff7-4975-9b8e-3212e4637f16/453ba2a1-6138-4e3c-9a06-b66f9a2832e4/IN-en-20240415-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+          src={BACKGROUND_IMG}
           alt='NA'
         />
       </div>
