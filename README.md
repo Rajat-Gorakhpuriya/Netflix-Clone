@@ -17,6 +17,14 @@
 - Bugfix for redirect browse page without login
 - Unsubscribed to the onAuthStateChanged callback
 - Added Hardcode values into the constant files
+- Register for TMDB API and get access token. also take json files inside utils for dummy data.
+- Get data from TMDB now playing movies.
+- Custom hook for nowPlaying movies
+- Update store with movie data
+- Planning for MainContainer and SecondaryContainer
+- Fetch data for trailor video
+- Update store with Trailer video data
+- Embedded the Youtube video and make it autoplay
 
 # Features 
 - Login/Sign Up
